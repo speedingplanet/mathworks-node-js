@@ -18,30 +18,45 @@ let server = http.createServer((request, response) => {
 });
 
 /*
-* Add the following listeners:
-* Listen for the 'listening' event on the server. Log to the console when the
-* server is listening, and what port it is listening on
-* 
-* Listen for a 'request' event, log that a request came in, include the 
-* method and the url in the message
-* 
-* Listen for an event when a response has completed (check the docs?)
-* Log the the response was sent and what the status code was
-* 
-*/
+ * Add the following listeners:
+ * Listen for the 'listening' event on the server. Log to the console when the
+ * server is listening, and what port it is listening on
+ *
+ * Listen for a 'request' event, log that a request came in, include the
+ * method and the url in the message
+ *
+ * Listen for an event when a response has completed (check the docs?)
+ * Log the the response was sent and what the status code was
+ *
+ */
+
+/*
 server.on('listening', () => {
-  console.log(`Server listening on port ${port}.`);
+  console.log(`Server listening on port ${this.address().port}.`);
+});
+*/
+
+server.on('listening', function () {
+  console.log(`Server listening on port ${this.address().port}.`);
+});
+
+server.on('customRequest', (message) => {
+  console.log('Custom request worked!', message);
 });
 
 server.on('request', (request, response) => {
+  server.emit('customRequest', 'test');
   let { method, url } = request;
+
   console.log(`Request came in to ${method} ${url}.`);
 
-  response.on('finish', () => {
-    console.log(
-      `Sent a response with a response code of  ${response.statusCode}`
-    );
-  });
+  response.once('finish', betterListener);
 });
+
+function betterListener(response) {
+  console.log(
+    `Sent a response with a response code of  ${response.statusCode}`
+  );
+}
 
 server.listen(port);
