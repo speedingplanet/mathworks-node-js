@@ -25,10 +25,11 @@ Finally, catch any errors and log them with console.error.
 Under Node v15.x, you could util.promisify this.
  */
 
-rl.question('What is your name? ', (name) => {
-  console.log(`Greetings, ${name}. Adding you to the list...`);
-  rl.close();
+let p = new Promise((resolve) => {
+  rl.question('What is your name? ', resolve);
+});
 
+p.then((name) => {
   fs.appendFile(filename, name)
     .then(() => {
       console.log('Wrote to file, getting contents....');
