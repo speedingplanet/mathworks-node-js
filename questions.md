@@ -14,6 +14,8 @@
     - `./foo.js`
     - `./foo/package.json:main` points to the file with the code
     - `./foo/index.js` has the code
+  - If the package structure were foo/bar/baz/utils.js:
+    - `require('./foo/bar/baz/utils')`
   - [Deeper dive in the CommonJS Modules docs](https://nodejs.org/api/modules.html)
 
 - How can I ensure that I set up event handlers before events are emitted?
