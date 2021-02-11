@@ -36,10 +36,6 @@ server.on('listening', () => {
 });
 */
 
-server.on('listening', function () {
-  console.log(`Server listening on port ${this.address().port}.`);
-});
-
 server.on('customRequest', (message) => {
   console.log('Custom request worked!', message);
 });
@@ -58,5 +54,13 @@ function betterListener(response) {
     `Sent a response with a response code of  ${response.statusCode}`
   );
 }
+
+server.on('listening', function () {
+  console.log(`1: Server listening on port ${this.address().port}.`);
+});
+
+server.on('listening', function () {
+  console.log(`2: Server listening on port ${this.address().port}.`);
+});
 
 server.listen(port);

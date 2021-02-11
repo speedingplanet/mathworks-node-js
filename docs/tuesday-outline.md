@@ -1,5 +1,7 @@
 # Tuesday's outline
 
+## Leftover event handling
+
 ## Asynchronous code
 
 - How does asynchronous code work in Node?
