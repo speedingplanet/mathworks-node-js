@@ -22,7 +22,8 @@
     "fs-extra": "^9.1.0",
     "jest": "^26.6.3",
     "mariadb": "^2.5.2",
+    "node-fetch": "^2.6.1",
     "sequelize": "^6.5.0",
-    "whatwg-fetch": "^3.5.0"
+    "sqlite3": "^5.0.1"
   }
 }
