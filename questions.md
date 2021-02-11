@@ -1,7 +1,8 @@
 # Pending questions
 
-- Other examples of APIs with synchronous methods?
+- Examples of APIs with synchronous methods?
 
+  - FileSystem
   - child_process
   - Zlib
   - cypto
