@@ -26,3 +26,20 @@
 
 - [10 Things I Regret About Node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
 - [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+- [Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
+- [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
+## REST Architecture
+
+- [Express Security Best Practices](https://expressjs.com/en/advanced/best-practice-security.html)
+- [Express Performance Best Practices](https://expressjs.com/en/advanced/best-practice-performance.html)
+- Loggers
+  - [Winston vs Bunyan](https://strongloop.com/strongblog/compare-node-js-logging-winston-bunyan/)
+  - [Winston](https://github.com/winstonjs/winston)
+  - [Bunyan](https://github.com/trentm/node-bunyan)
+
+# Streams
+
+- [Transform Streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html)
+- [Everything you need to know about Streams](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
+- [Streams and async iteration](https://2ality.com/2019/11/nodejs-streams-async-iteration.html)

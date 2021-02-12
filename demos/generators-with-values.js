@@ -10,7 +10,10 @@ function* createGenerator() {
 
 let generatorObject = createGenerator();
 console.log('First next: ', generatorObject.next().value);
+
+/*
 console.log('Second next: ', generatorObject.next().value);
 console.log('Third next: ', generatorObject.next().value);
 console.log('Fourth next: ', generatorObject.next().value);
 console.log('Done? ', generatorObject.next().done);
+*/

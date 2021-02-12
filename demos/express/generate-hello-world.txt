@@ -1,0 +1,3 @@
+Run this command:
+npx express --pug generated-hello-world
+And then try out the generated site
